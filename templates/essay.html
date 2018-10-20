@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/essay.css"/>
+</head>
+<body>
+<div class="main">
+    <h4>文章列表</h4>
+    <ul class="list">
+        {% for essayData in essayData %}
+        <li>
+            <h4>{{essayData.title}}</h4>
+            <p class="summary">{{essayData.summary}}</p>
+            <p class="at"><span class="author"><img src="/static/img/author.png"/>：{{ essayData.author }}</span><span class="time"><img src="/static/img/time.png"/>：{{ essayData.time }}</span></p>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>

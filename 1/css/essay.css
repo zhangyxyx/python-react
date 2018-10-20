@@ -1,0 +1,20 @@
+              *{margin:0px;padding:0px;}
+        .main{width:960px;margin:0 auto;}
+        .main h4{padding:10px;text-align:center}
+        ul li{list-style:none;}
+        .list li{font-size:15px;padding:10px;background:#faf5f5;border-top:2px solid #fff;}
+        .list li h4{width:100%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;text-align:left;}
+        .list li .summary{
+            text-overflow: ellipsis;
+            overflow : hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            margin:10px 0px;
+        }
+        .list li .at{
+            width:100%;height:25px;line-height:25px;
+        }
+        .list li .at span{display:block;width:50%;float:left;}
+        .list li .at span img{width:25px;float:left}

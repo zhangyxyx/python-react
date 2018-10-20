@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台主页面</title>
+</head>
+<body>
+<div class="home">
+    姓名为name1的年龄为:{{ str.price }}
+    {% for str in str %}
+        <p>{{str.brand}}&nbsp&nbsp&nbsp:&nbsp&nbsp&nbsp{{str.price}}</p>
+        <br>
+    {% endfor %}
+    <h3>这是home页面</h3>
+</div>
+<script src="/static/jquery.js"></script>
+<script src="/static/jqueryHome.js"></script>
+<script>
+    $(function(){
+        $.ajax({
+            url:'/ajax_list/',
+            dataType:'json',
+            success:function(data){
+                console.log(data)
+            }
+        })
+    })
+</script>
+</body>
+</html>

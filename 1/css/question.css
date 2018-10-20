@@ -1,0 +1,14 @@
+        *{margin:0px;padding:0px;}
+        .main{width:960px;margin:0 auto;}
+        .main h4{padding:10px;text-align:center}
+        ul li{list-style:none;}
+        .question li{font-size:15px;padding:10px;background:#faf5f5;border-top:1px solid #fff;}
+        .question li h4{width:100%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;text-align:left;}
+        .question li .content{
+            margin:10px 0px;
+        }
+        .question li .at{
+            width:100%;height:25px;line-height:25px;
+        }
+        .question li .at span{display:block;width:33%;float:left;}
+        .question li .at span img{width:25px;float:left}

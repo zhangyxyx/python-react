@@ -1,0 +1,75 @@
+import MySQLdb
+conn=MySQLdb.connect(host='localhost',port=3307,user='root',passwd='123456',db='test')
+cur=conn.cursor();
+
+django默认的split3:
+'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'article.db'),
+    }
+
+合并迁移表：
+python manage.py makemigrations pythonweb
+python manage.py migrate pythonweb
+
+选择表中全部的数据：
+SELECT * FROM appdata.pythonweb_mobile m;
+SELECT * FROM appdata.pythonweb_question m;
+
+给表中添加数据：
+insert into mobile(brand, size, price) values(123, 2.4, 234);
+insert into pythonweb_mobile(brand,size,price) values
+(1,2.3,4),
+(2,4.4,6);
+
+insert into pythonweb_essay(title,summary,author,time) values
+('biaoti','javajavajavajavajavajavajavajavajavajava','admin','2018-9-7');
+
+insert into pythonweb_question(title,econtent,user,time,etype) values
+('java','AOP','admin','2018-9-5','1'),
+('ECMAScript','as','zyx','2018-9-6','1');
+
+创建表：
+create table student (
+id           int         primary key  ，
+name    varchar(10)  ，
+age       int   （这里不要有符号）
+)  ；
+ create table mobile
+(id int not null auto_increment, primary key(id), 
+brand int,
+size float,
+price int) ;
+
+ create table pythonweb_mobile
+(id int not null auto_increment, primary key(id), 
+brand int,
+size float,
+price int) ;
+
+查看表：
+desc pythonweb_mobile;
+desc pythonweb_question;
+
+资料：
+https://blog.csdn.net/dqchouyang/article/details/50011673?locationNum=5&fps=1
+https://www.cnblogs.com/laoguiaabb/p/8182906.html
+https://www.cnblogs.com/luna666/p/9007263.html
+https://www.cnblogs.com/laoguiaabb/p/8182906.html
+https://www.cnblogs.com/Pjson/p/8573776.html mysql
+
+设置表：
+class Essay(models.Model):
+    title = models.CharField(max_length=45)
+    summary = models.CharField(max_length=45)
+    author = models.CharField(max_length=45)
+    time = models.DateTimeField()
+
+class Question(models.Model):
+    title = models.CharField(max_length=45)
+    econtent = models.TextField()
+    user = models.CharField(max_length=45)
+    time = models.DateTimeField()
+    type = models.CharField(max_length=45)
+
+
